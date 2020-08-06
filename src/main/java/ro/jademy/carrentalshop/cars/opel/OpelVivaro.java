@@ -73,8 +73,7 @@ public class OpelVivaro extends Opel{
         this.rented = rented;
     }
 
-    public OpelVivaro( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
-        super(make);
+    public OpelVivaro(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
         this.model = model;
         this.gearbox = gearbox;
         this.fuelType = fuelType;

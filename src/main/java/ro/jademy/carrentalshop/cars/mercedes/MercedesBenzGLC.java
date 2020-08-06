@@ -73,8 +73,7 @@ public class MercedesBenzGLC extends MercedesBenz{
         this.rented = rented;
     }
 
-    public MercedesBenzGLC( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
-        super(make);
+    public MercedesBenzGLC(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
         this.model = model;
         this.gearbox = gearbox;
         this.fuelType = fuelType;

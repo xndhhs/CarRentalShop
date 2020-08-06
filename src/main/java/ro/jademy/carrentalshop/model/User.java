@@ -73,7 +73,9 @@ public class User implements Payable{
 
     @Override
     public void calculateNoOfDays() {
-
+        int numberOfDays = (int) (getReturnDate().getTime() - getPickupDate().getTime()) / (1000 * 60 * 60 *24);
+        System.out.println(numberOfDays);
+        //return numberOfDays;
     }
 
     @Override

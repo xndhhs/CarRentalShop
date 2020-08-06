@@ -73,8 +73,7 @@ public class RenaultMegane extends Renault{
         this.rented = rented;
     }
 
-    public RenaultMegane( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
-        super(make);
+    public RenaultMegane(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
         this.model = model;
         this.gearbox = gearbox;
         this.fuelType = fuelType;

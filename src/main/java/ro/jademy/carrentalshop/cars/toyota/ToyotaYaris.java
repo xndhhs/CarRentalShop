@@ -73,8 +73,7 @@ public class ToyotaYaris extends Toyota{
         this.rented = rented;
     }
 
-    public ToyotaYaris( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
-        super(make);
+    public ToyotaYaris(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
         this.model = model;
         this.gearbox = gearbox;
         this.fuelType = fuelType;

@@ -1,16 +1,15 @@
 package ro.jademy.carrentalshop.data;
 
-import ro.jademy.carrentalshop.model.Car;
-import ro.jademy.carrentalshop.model.SmallCar;
+import ro.jademy.carrentalshop.cars.Car;
 
 import java.util.ArrayList;
 
 public class CarBuilder implements Sortable {
     public ArrayList<Car> carList = new ArrayList<>();
-    Car car1 = new SmallCar("Toyota", "Aygo", "Manual", "Gasoline", 4, 57.73, "Small");
-    Car car2 = new SmallCar("Seat", "Ibiza", "Manual", "Diesel", 5, 63.44, "Small");
-    Car car3 = new SmallCar("Opel", "Corsa", "Automatic", "Diesel", 5, 153.03, "Small");
-    Car car4 = new SmallCar("Renault", "Zoe", "Automatic", "Electric", 4, 257.14, "Small");
+//    Car car1 = new Car("Toyota", "Aygo", "Manual", "Gasoline", 4, 57.73, "Small");
+//    Car car2 = new Car("Seat", "Ibiza", "Manual", "Diesel", 5, 63.44, "Small");
+//    Car car3 = new Car("Opel", "Corsa", "Automatic", "Diesel", 5, 153.03, "Small");
+//    Car car4 = new Car("Renault", "Zoe", "Automatic", "Electric", 4, 257.14, "Small");
 //    Car car5 = new Car("Ford", "Focus", "Manual", "Gasoline", 5, 145.65, "Medium");
 //    Car car6 = new Car("Toyota", "Corolla", "Automatic", "Hybrid", 5, 171.07, "Medium");
 //    Car car7 = new Car("Seat", "Leon", "Automatic", "Diesel", 5, 136.36, "Medium");

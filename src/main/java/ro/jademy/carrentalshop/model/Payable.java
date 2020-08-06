@@ -2,7 +2,7 @@ package ro.jademy.carrentalshop.model;
 
 public interface Payable {
     default void calculateNoOfDays() {
-        //calculate period
+        //calculate rental period
     }
     default void calculateFee() {
         //calculate fee to be paid

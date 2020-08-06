@@ -1,35 +1,14 @@
-package ro.jademy.carrentalshop.model;
+package ro.jademy.carrentalshop.cars.dacia;
 
-public class Car {
-    private String make;
+public class DaciaDuster extends Dacia{
     private String model;
     private String gearbox;
     private String fuelType;
     private int noOfDoors = 4;
     private int noOfSeats;
     private double pricePerDay;
-
+    private String carType;
     private boolean rented = false;
-
-    public Car() {
-    }
-
-    public Car( String make, String model, String gearbox, String fuelType, int noOfSeats, double pricePerDay) {
-        this.make = make;
-        this.model = model;
-        this.gearbox = gearbox;
-        this.fuelType = fuelType;
-        this.noOfSeats = noOfSeats;
-        this.pricePerDay = pricePerDay;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake( String make ) {
-        this.make = make;
-    }
 
     public String getModel() {
         return model;
@@ -79,11 +58,31 @@ public class Car {
         this.pricePerDay = pricePerDay;
     }
 
+    public String getCarType() {
+        return carType;
+    }
+
+    public void setCarType( String carType ) {
+        this.carType = carType;
+    }
+
     public boolean isRented() {
         return rented;
     }
 
     public void setRented( boolean rented ) {
+        this.rented = rented;
+    }
+
+    public DaciaDuster( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
+        super(make);
+        this.model = model;
+        this.gearbox = gearbox;
+        this.fuelType = fuelType;
+        this.noOfDoors = noOfDoors;
+        this.noOfSeats = noOfSeats;
+        this.pricePerDay = pricePerDay;
+        this.carType = carType;
         this.rented = rented;
     }
 }

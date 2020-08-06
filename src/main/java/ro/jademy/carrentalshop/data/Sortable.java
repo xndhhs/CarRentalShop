@@ -2,23 +2,17 @@ package ro.jademy.carrentalshop.data;
 
 public interface Sortable {
     //implement methods to sort by different criteria
-    default void sortByMake() {
+    void sortByMake();
 
-    }
-    default void sortByCategory() {
+    void sortByCategory();
 
-    }
-    default void sortByGearbox() {
+    void sortByGearbox();
 
-    }
-    default void sortByFuelType() {
+    void sortByFuelType();
 
-    }
-    default void sortByNoOfSeats() {
+    void sortByNoOfSeats();
 
-    }
-    default void sortByAvailability() {
+    void sortByAvailability();
     //remove unavailable cars
-    }
 
 }

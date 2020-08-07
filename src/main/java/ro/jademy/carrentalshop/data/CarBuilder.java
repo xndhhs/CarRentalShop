@@ -1,15 +1,14 @@
 package ro.jademy.carrentalshop.data;
 
-import ro.jademy.carrentalshop.cars.Car;
-import ro.jademy.carrentalshop.cars.toyota.Toyota;
-import ro.jademy.carrentalshop.cars.toyota.ToyotaAygo;
+import ro.jademy.carrentalshop.model.cars.Car;
+import ro.jademy.carrentalshop.model.cars.toyota.ToyotaAygo;
 
 
 import java.util.ArrayList;
 
-public class CarBuilder implements Sortable {
+public class CarBuilder {
     public ArrayList<Car> carList = new ArrayList<>();
-    public Car car1 = new ToyotaAygo("Aygo","Manual","Gasoline",4,4,57.37, "Small", false);
+//    public Car car1 = new ToyotaAygo("Aygo","Manual","Gasoline",4,4,57.37, "Small", false);
 
 
     //    Car car2 = new Car("Seat", "Ibiza", "Manual", "Diesel", 5, 63.44, "Small");
@@ -31,33 +30,5 @@ public class CarBuilder implements Sortable {
 //    Car car18 = new Car("Ford", "Kuga", "Manual", "Diesel", 5, 227.14, "SUV");
 //    Car car19 = new Car("Mercedes-Benz", "GLC", "Automatic", "Diesel", 5, 470.38, "SUV");
 
-    @Override
-    public void sortByMake() {
 
-    }
-
-    @Override
-    public void sortByCategory() {
-
-    }
-
-    @Override
-    public void sortByGearbox() {
-
-    }
-
-    @Override
-    public void sortByFuelType() {
-
-    }
-
-    @Override
-    public void sortByNoOfSeats() {
-
-    }
-
-    @Override
-    public void sortByAvailability() {
-
-    }
 }

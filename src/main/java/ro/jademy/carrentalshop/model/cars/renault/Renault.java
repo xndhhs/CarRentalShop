@@ -9,5 +9,7 @@ public class Renault extends Car {
 
     }
 
-
+    public Renault(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType) {
+        super("Renault", model, gearbox, fuelType, noOfDoors, noOfSeats, pricePerDay, carType);
+    }
 }

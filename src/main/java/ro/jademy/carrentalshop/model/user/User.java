@@ -4,30 +4,21 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User{
+public class User {
     //user can login
     //access a menu for actions (see cars, rent a car, return a car, calculate rates)
     private String userName;
     private String userPass;
-    private LocalDate licenseGainedDate;
-    private int age;
-    private List<RentedCar> carRentedHistory = new ArrayList<>();
+    private String firstName;
+    private String lastName;
 
-    public User( String userName, String userPass, int age, List<RentedCar> carRentedHistory,LocalDate licenseGainedDate ) {
+    public User( String userName, String userPass, String firstName, String lastName ) {
         this.userName = userName;
         this.userPass = userPass;
-        this.age = age;
-        this.carRentedHistory = carRentedHistory;
-        this.licenseGainedDate = licenseGainedDate;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public LocalDate getLicenseGainedDate() {
-        return licenseGainedDate;
-    }
-
-    public void setLicenseGainedDate( LocalDate licenseGainedDate ) {
-        this.licenseGainedDate = licenseGainedDate;
-    }
 
     public String getUserName() {
         return userName;
@@ -45,22 +36,23 @@ public class User{
         this.userPass = userPass;
     }
 
-    public List<RentedCar> getCarRentedHistory() {
-        return carRentedHistory;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setCarRentedHistory( List<RentedCar> carRentedHistory ) {
-        this.carRentedHistory = carRentedHistory;
+    public void setFirstName( String firstName ) {
+        this.firstName = firstName;
     }
 
-    public int getAge() {
-        return age;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setAge( int age ) {
-        this.age = age;
+    public void setLastName( String lastName ) {
+        this.lastName = lastName;
     }
-
-
-
 }
+
+
+
+

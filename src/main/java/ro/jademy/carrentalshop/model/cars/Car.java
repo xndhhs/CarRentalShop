@@ -1,20 +1,22 @@
 package ro.jademy.carrentalshop.model.cars;
 
+import java.util.Objects;
+
 public abstract class Car {
-    private String make;
-    private String model;
-    private String gearbox;
-    private String fuelType;
-    private int noOfDoors;
-    private int noOfSeats;
-    private double pricePerDay;
-    private String carType;
+    protected String make;
+    protected String model;
+    protected String gearbox;
+    protected String fuelType;
+    protected int noOfDoors;
+    protected int noOfSeats;
+    protected double pricePerDay;
+    protected String carType;
     private boolean rented = false;
 
     public Car() {
     }
 
-    public Car( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType, boolean rented ) {
+    public Car( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType) {
         this.make = make;
         this.model = model;
         this.gearbox = gearbox;
@@ -23,7 +25,7 @@ public abstract class Car {
         this.noOfSeats = noOfSeats;
         this.pricePerDay = pricePerDay;
         this.carType = carType;
-        this.rented = rented;
+
     }
 
     public String getMake() {
@@ -96,5 +98,25 @@ public abstract class Car {
 
     public void setRented( boolean rented ) {
         this.rented = rented;
+    }
+
+    @Override
+    public boolean equals( Object o ) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return noOfDoors == car.noOfDoors &&
+                noOfSeats == car.noOfSeats &&
+                Double.compare(car.pricePerDay, pricePerDay) == 0 &&
+                Objects.equals(make, car.make) &&
+                Objects.equals(model, car.model) &&
+                Objects.equals(gearbox, car.gearbox) &&
+                Objects.equals(fuelType, car.fuelType) &&
+                Objects.equals(carType, car.carType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(make, model, gearbox, fuelType, noOfDoors, noOfSeats, pricePerDay, carType);
     }
 }

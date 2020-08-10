@@ -1,4 +1,4 @@
-package ro.jademy.carrentalshop.data;
+package ro.jademy.carrentalshop.model;
 
 public interface Sortable {
     //implement methods to sort by different criteria

@@ -1,13 +1,14 @@
 package ro.jademy.carrentalshop.model.cars;
 
 public class ExtraOptions {
-    public double price;
-    private String name;
+    protected double price;
+    protected String name;
 
     public ExtraOptions() {
 
     }
-    public ExtraOptions(String name, double price) {
+
+    public ExtraOptions( String name, double price ) {
         this.name = name;
         this.price = price;
     }

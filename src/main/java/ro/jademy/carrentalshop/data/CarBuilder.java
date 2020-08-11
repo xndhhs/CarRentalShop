@@ -46,6 +46,9 @@ public class CarBuilder {
         Car captur1 = new RenaultCaptur("Captur", "Automatic", "Gasoline", 4, 5, 136.36, "SUV");
         Car megane1 = new RenaultCaptur("Megane", "Automatic", "Gasoline", 4, 5, 222.56, "Large");
         Car zoe1 = new RenaultZoe("Zoe", "Automatic", "Electric", 4, 4, 257.14, "Small");
+//        logan1.setRented(true);
+//        captur1.setRented(true);
+//        GLC1.setRented(true);
         carList.add(aygo1);
         carList.add(yaris1);
         carList.add(corolla1);

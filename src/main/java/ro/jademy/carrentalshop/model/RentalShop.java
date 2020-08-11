@@ -53,9 +53,13 @@ public static void showAllCars( RentalShop carRentals ) {
             + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
     int i = 1;
     for (Car car : carRentals.getCars()) {
-        System.out.println(i + "." + StringUtils.center(car.getMake(), 14, " ") + StringUtils.center(car.getModel(), 16, " ") + StringUtils.center(car.getFuelType(), 14, " ")
-                + StringUtils.center(car.getGearbox(), 14, " ") + StringUtils.center(String.valueOf(car.getNoOfDoors()), 10, ' ') + StringUtils.center(String.valueOf(car.getNoOfSeats()), 10, ' ')
-                + StringUtils.center(String.valueOf(car.getPricePerDay()), 12, ' ') + StringUtils.center(car.getCarType(), 20, " "));
+        if (!car.isRented()) {
+            System.out.println(i + "." + StringUtils.center(car.getMake(), 14, " ") + StringUtils.center(car.getModel(), 16, " ") + StringUtils.center(car.getFuelType(), 14, " ")
+                    + StringUtils.center(car.getGearbox(), 14, " ") + StringUtils.center(String.valueOf(car.getNoOfDoors()), 10, ' ') + StringUtils.center(String.valueOf(car.getNoOfSeats()), 10, ' ')
+                    + StringUtils.center(String.valueOf(car.getPricePerDay()), 12, ' ') + StringUtils.center(car.getCarType(), 20, " "));
+        } else {
+            continue;
+        }
         i++;
     }
 }

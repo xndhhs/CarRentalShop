@@ -2,7 +2,7 @@ package ro.jademy.carrentalshop.model.cars;
 
 import java.util.Objects;
 
-public abstract class Car {
+public abstract class Car implements Comparable <Car> {
     protected String make;
     protected String model;
     protected String gearbox;
@@ -118,5 +118,9 @@ public abstract class Car {
     @Override
     public int hashCode() {
         return Objects.hash(make, model, gearbox, fuelType, noOfDoors, noOfSeats, pricePerDay, carType);
+    }
+    @Override
+    public int compareTo(Car o) {
+        return this.getMake().compareTo(o.getMake());
     }
 }

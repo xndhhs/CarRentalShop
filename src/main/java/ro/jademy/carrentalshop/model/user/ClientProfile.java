@@ -1,8 +1,14 @@
 package ro.jademy.carrentalshop.model.user;
 
+import ro.jademy.carrentalshop.model.RentalShop;
+import ro.jademy.carrentalshop.model.cars.Car;
+import ro.jademy.carrentalshop.model.cars.ExtraOptions;
+
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ClientProfile extends User implements Payable {
 
@@ -24,15 +30,8 @@ public class ClientProfile extends User implements Payable {
        //calculate price
         //return a car
         //show car history
-        //get current rented car for a user
-        public RentedCar getCurrentRentedCar () {
-            for (RentedCar item: carRentedHistory) {
-                if(item.isRented()){
-                    return item;
-                }
-            }
-            return null;
-        }
+
+
 
     @Override
     public void calculateNoOfDays() {
@@ -49,5 +48,32 @@ public class ClientProfile extends User implements Payable {
     @Override
     public void applyDiscount() {
 
+    }
+
+    public Car userRentsCar( RentalShop rentalShop ){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose the car you want to rent: ");
+        int position = scanner.nextInt();
+        Car rentedCar = rentalShop.getCars().get(position-1);
+        return rentedCar;
+    }
+    public static List<ExtraOptions> userRentsExtraOption (RentalShop rentalShop){
+        Scanner scanner = new Scanner(System.in);
+        List<ExtraOptions> userRentsExtraOption = new ArrayList<>();
+        RentalShop.showAllExtras(rentalShop);
+        System.out.println("Choose the options you want to add separated by commas: ");
+        String options = scanner.next();
+        int i = 0;
+        do {
+                int position = Character.getNumericValue(options.charAt(i))-1;
+                userRentsExtraOption.add(rentalShop.getExtras().get(position));
+                i+=2;
+
+        } while (i < options.length());
+
+        for (ExtraOptions extraOption: userRentsExtraOption) {
+            System.out.println(extraOption.getName());
+        }
+        return userRentsExtraOption;
     }
 }

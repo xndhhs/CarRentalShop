@@ -5,13 +5,14 @@ import ro.jademy.carrentalshop.model.cars.Car;
 import ro.jademy.carrentalshop.data.*;
 import org.apache.commons.lang3.StringUtils;
 import ro.jademy.carrentalshop.model.cars.ExtraOptions;
+import ro.jademy.carrentalshop.model.user.ClientProfile;
 import ro.jademy.carrentalshop.model.user.UserList;
-
-import java.sql.SQLOutput;
+import java.util.Scanner;
 
 
 public class Main {
     public static void main( String[] args ) {
+        final Scanner scanner = new Scanner(System.in);
         //create a shop that contains
         // a shop admin
         // a list of users
@@ -30,8 +31,22 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println();
+        autovit.sortByMake(autovit);
+        System.out.println("\n\n\n");
+        autovit.sortByModel(autovit);
+        System.out.println("\n\n\n");
+        autovit.sortByFuelType(autovit);
+        System.out.println("\n\n\n");
+        autovit.sortByGearbox(autovit);
+        System.out.println("\n\n\n");
+        autovit.sortByCategory(autovit);
+        System.out.println("\n\n\n");
         RentalShop.showAllExtras(autovit);
+        System.out.println("\n\n\n");
+       // ClientProfile.userRentsExtraOption(autovit);
+        //autovit.login(autovit.getUsers());
 
+       RentalShop.showClientMenu(autovit);
 
     }
 }

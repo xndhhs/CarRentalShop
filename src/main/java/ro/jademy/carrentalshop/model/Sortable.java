@@ -2,17 +2,18 @@ package ro.jademy.carrentalshop.model;
 
 public interface Sortable {
     //implement methods to sort by different criteria
-    void sortByMake();
+    void sortByMake(RentalShop carRentals);
 
-    void sortByCategory();
+    void sortByModel(RentalShop carRentals);
 
-    void sortByGearbox();
+    void sortByFuelType(RentalShop carRentals);
 
-    void sortByFuelType();
+    void sortByGearbox(RentalShop carRentals);
 
-    void sortByNoOfSeats();
+    void sortByCategory(RentalShop carRentals);
 
-    void sortByAvailability();
-    //remove unavailable cars
+    void sortByPrice(RentalShop carRentals);
+
+   //remove unavailable cars
 
 }

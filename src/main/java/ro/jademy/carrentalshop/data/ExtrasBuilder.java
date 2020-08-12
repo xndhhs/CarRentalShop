@@ -1,6 +1,5 @@
 package ro.jademy.carrentalshop.data;
 
-import org.apache.commons.lang3.StringUtils;
 import ro.jademy.carrentalshop.model.cars.ExtraOptions;
 
 import java.util.ArrayList;

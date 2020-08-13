@@ -7,7 +7,7 @@ public class MercedesBenz extends Car {
     public MercedesBenz() {
     }
 
-    public MercedesBenz( String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType) {
+    public MercedesBenz(String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType) {
         super(make, model, gearbox, fuelType, noOfDoors, noOfSeats, pricePerDay, carType);
     }
 }

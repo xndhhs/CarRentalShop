@@ -1,4 +1,5 @@
 package ro.jademy.carrentalshop.data;
+
 import ro.jademy.carrentalshop.model.cars.Car;
 import ro.jademy.carrentalshop.model.cars.dacia.DaciaDuster;
 import ro.jademy.carrentalshop.model.cars.dacia.DaciaLodgy;
@@ -15,12 +16,13 @@ import ro.jademy.carrentalshop.model.cars.renault.RenaultZoe;
 import ro.jademy.carrentalshop.model.cars.toyota.ToyotaAygo;
 import ro.jademy.carrentalshop.model.cars.toyota.ToyotaCorolla;
 import ro.jademy.carrentalshop.model.cars.toyota.ToyotaYaris;
+
 import java.util.ArrayList;
 
 public class CarBuilder {
 
 
-    public static ArrayList<Car> getAllCars () {
+    public static ArrayList<Car> getAllCars() {
         ArrayList<Car> carList = new ArrayList<>();
         //Toyota
         Car aygo1 = new ToyotaAygo("Aygo", "Manual", "Gasoline", 4, 4, 57.73, "Small");

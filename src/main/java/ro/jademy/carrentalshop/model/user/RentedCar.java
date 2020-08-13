@@ -19,7 +19,7 @@ public class RentedCar {
 
     }
 
-    public RentedCar( Car rentedCar, LocalDate pickupDate, LocalDate returnDate, boolean isRented, double amountToPayRON){
+    public RentedCar(Car rentedCar, LocalDate pickupDate, LocalDate returnDate, boolean isRented, double amountToPayRON) {
         this.rentedCar = rentedCar;
         this.pickupDate = pickupDate;
         this.returnDate = returnDate;
@@ -32,7 +32,7 @@ public class RentedCar {
         return extraOptions;
     }
 
-    public void setExtraOptions( ArrayList<ExtraOptions> extraOptions ) {
+    public void setExtraOptions(ArrayList<ExtraOptions> extraOptions) {
         this.extraOptions = extraOptions;
     }
 
@@ -40,7 +40,7 @@ public class RentedCar {
         return isRented;
     }
 
-    public void setRented( boolean rented ) {
+    public void setRented(boolean rented) {
         isRented = rented;
     }
 
@@ -48,7 +48,7 @@ public class RentedCar {
         return amountToPayRON;
     }
 
-    public void setAmountToPayRON( double amountToPayRON ) {
+    public void setAmountToPayRON(double amountToPayRON) {
         this.amountToPayRON = amountToPayRON;
     }
 
@@ -56,7 +56,7 @@ public class RentedCar {
         return amountToPayEUR;
     }
 
-    public void setAmountToPayEUR( double amountToPayEUR ) {
+    public void setAmountToPayEUR(double amountToPayEUR) {
         this.amountToPayEUR = amountToPayEUR;
     }
 
@@ -64,7 +64,7 @@ public class RentedCar {
         return rentedCar;
     }
 
-    public void setRentedCar( Car rentedCar ) {
+    public void setRentedCar(Car rentedCar) {
         this.rentedCar = rentedCar;
     }
 
@@ -72,7 +72,7 @@ public class RentedCar {
         return pickupDate;
     }
 
-    public void setPickupDate( LocalDate pickupDate ) {
+    public void setPickupDate(LocalDate pickupDate) {
         this.pickupDate = pickupDate;
     }
 
@@ -80,7 +80,7 @@ public class RentedCar {
         return returnDate;
     }
 
-    public void setReturnDate( LocalDate returnDate ) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
 
     }

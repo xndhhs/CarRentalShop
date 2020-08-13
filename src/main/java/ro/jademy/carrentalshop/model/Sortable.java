@@ -14,6 +14,6 @@ public interface Sortable {
 
     void sortByPrice(RentalShop carRentals);
 
-   //remove unavailable cars
+    //remove unavailable cars
 
 }

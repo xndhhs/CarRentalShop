@@ -1,6 +1,5 @@
 package ro.jademy.carrentalshop.model.user;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;

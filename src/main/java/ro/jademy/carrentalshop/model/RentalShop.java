@@ -1,18 +1,12 @@
 package ro.jademy.carrentalshop.model;
 
 import org.apache.commons.lang3.StringUtils;
-import ro.jademy.carrentalshop.data.CarBuilder;
 import ro.jademy.carrentalshop.data.ExtrasBuilder;
 import ro.jademy.carrentalshop.model.cars.Car;
 import ro.jademy.carrentalshop.model.cars.ExtraOptions;
-import ro.jademy.carrentalshop.model.user.ClientProfile;
-import ro.jademy.carrentalshop.model.user.ShopSalesman;
 import ro.jademy.carrentalshop.model.user.User;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class RentalShop implements Sortable {
@@ -20,10 +14,12 @@ public class RentalShop implements Sortable {
     ArrayList<ExtraOptions> extras;
     ArrayList<Car> cars;
     ArrayList<User> users;
+
     public RentalShop() {
 
     }
-    public RentalShop( ArrayList<ExtraOptions> extras, ArrayList<Car> cars, ArrayList<User> users ) {
+
+    public RentalShop(ArrayList<ExtraOptions> extras, ArrayList<Car> cars, ArrayList<User> users) {
         this.extras = extras;
         this.cars = cars;
         this.users = users;
@@ -32,7 +28,7 @@ public class RentalShop implements Sortable {
     //    sort cars by:make, fuel,gearbox,type(size), price
 //print raw car data
 
-    public static void showAllCars( RentalShop carRentals ) {
+    public static void showAllCars(RentalShop carRentals) {
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
         int i = 1;
@@ -49,7 +45,7 @@ public class RentalShop implements Sortable {
     }
 
     //print all extra options
-    public static void showAllExtras( RentalShop carRentals ) {
+    public static void showAllExtras(RentalShop carRentals) {
         int i = 1;
         System.out.println(StringUtils.center("  Extra Option", 20, " ") + StringUtils.center("Price", 10, " "));
         for (ExtraOptions extraOption : carRentals.getExtras()) {
@@ -58,7 +54,7 @@ public class RentalShop implements Sortable {
         }
     }
 
-    public static void showClientMenu( RentalShop carRentals ) {
+    public static void showClientMenu(RentalShop carRentals) {
         System.out.println(" -------------------------------------");
         System.out.println("|    Welcome to the Car Rental Shop   |");
         System.out.println(" -------------------------------------");
@@ -80,10 +76,10 @@ public class RentalShop implements Sortable {
                 showAllCars(carRentals);
                 System.out.println("Press B to go back to the main menu");
                 temp = scanner.nextLine();
-                while (!temp.equalsIgnoreCase("b")){
+                while (!temp.equalsIgnoreCase("b")) {
                     System.out.println("Press B to go back to the main menu");
                     temp = scanner.nextLine();
-                    }
+                }
                 showClientMenu(carRentals);
             case ("2"):
                 showClientSubMenu(carRentals);
@@ -94,7 +90,8 @@ public class RentalShop implements Sortable {
             case ("6"):
         }
     }
-    public static void showClientSubMenu( RentalShop carRentals ) {
+
+    public static void showClientSubMenu(RentalShop carRentals) {
 
         System.out.println("1. Sort cars by make");
         System.out.println("2. Sort cars by model");
@@ -109,7 +106,7 @@ public class RentalShop implements Sortable {
                 carRentals.sortByMake(carRentals);
                 System.out.println("Press B to go back to the main menu");
                 temp = scanner.nextLine();
-                while (!temp.equalsIgnoreCase("b")){
+                while (!temp.equalsIgnoreCase("b")) {
                     System.out.println("Press B to go back to the main menu");
                     temp = scanner.nextLine();
                 }
@@ -153,7 +150,7 @@ public class RentalShop implements Sortable {
 //        }
 //    }
 
-    public User login( RentalShop carRentals ) {
+    public User login(RentalShop carRentals) {
         boolean login = false;
         User currentUser = null;
         do {
@@ -174,7 +171,7 @@ public class RentalShop implements Sortable {
                 System.out.println("Incorrect Username/Password!");
             }
 
-        } while ( !login );
+        } while (!login);
         return currentUser;
     }
 
@@ -182,7 +179,7 @@ public class RentalShop implements Sortable {
         return extras;
     }
 
-    public void setExtras( ArrayList<ExtraOptions> extras ) {
+    public void setExtras(ArrayList<ExtraOptions> extras) {
         this.extras = ExtrasBuilder.getAllExtras();
     }
 
@@ -190,7 +187,7 @@ public class RentalShop implements Sortable {
         return cars;
     }
 
-    public void setCars( ArrayList<Car> cars ) {
+    public void setCars(ArrayList<Car> cars) {
         this.cars = cars;
     }
 
@@ -198,13 +195,13 @@ public class RentalShop implements Sortable {
         return users;
     }
 
-    public void setUsers( ArrayList<User> users ) {
+    public void setUsers(ArrayList<User> users) {
         this.users = users;
     }
 
     @Override
-    public void sortByMake( RentalShop carRentals ) {
-        carRentals.cars.sort(( o1, o2 ) -> o1.getMake().compareTo(o2.getMake()));
+    public void sortByMake(RentalShop carRentals) {
+        carRentals.cars.sort((o1, o2) -> o1.getMake().compareTo(o2.getMake()));
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
         int i = 1;
@@ -221,8 +218,8 @@ public class RentalShop implements Sortable {
     }
 
     @Override
-    public void sortByModel( RentalShop carRentals ) {
-        carRentals.cars.sort(( o1, o2 ) -> o1.getModel().compareTo(o2.getModel()));
+    public void sortByModel(RentalShop carRentals) {
+        carRentals.cars.sort((o1, o2) -> o1.getModel().compareTo(o2.getModel()));
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
         int i = 1;
@@ -239,8 +236,8 @@ public class RentalShop implements Sortable {
     }
 
     @Override
-    public void sortByFuelType( RentalShop carRentals ) {
-        carRentals.cars.sort(( o1, o2 ) -> o1.getFuelType().compareTo(o2.getFuelType()));
+    public void sortByFuelType(RentalShop carRentals) {
+        carRentals.cars.sort((o1, o2) -> o1.getFuelType().compareTo(o2.getFuelType()));
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
         int i = 1;
@@ -257,8 +254,8 @@ public class RentalShop implements Sortable {
     }
 
     @Override
-    public void sortByGearbox( RentalShop carRentals ) {
-        carRentals.cars.sort(( o1, o2 ) -> o1.getGearbox().compareTo(o2.getGearbox()));
+    public void sortByGearbox(RentalShop carRentals) {
+        carRentals.cars.sort((o1, o2) -> o1.getGearbox().compareTo(o2.getGearbox()));
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
         int i = 1;
@@ -275,8 +272,8 @@ public class RentalShop implements Sortable {
     }
 
     @Override
-    public void sortByCategory( RentalShop carRentals ) {
-        carRentals.cars.sort(( o1, o2 ) -> o1.getCarType().compareTo(o2.getCarType()));
+    public void sortByCategory(RentalShop carRentals) {
+        carRentals.cars.sort((o1, o2) -> o1.getCarType().compareTo(o2.getCarType()));
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));
         int i = 1;
@@ -293,7 +290,7 @@ public class RentalShop implements Sortable {
     }
 
     @Override
-    public void sortByPrice( RentalShop carRentals ) {
+    public void sortByPrice(RentalShop carRentals) {
 //        carRentals.cars.sort(( o1, o2 ) -> o1.getPricePerDay().compareTo(o2.getPricePerDay()));
         System.out.println(StringUtils.center("  Make", 16, " ") + StringUtils.center("  Model", 16, " ") + StringUtils.center("Fuel type", 16, ' ')
                 + StringUtils.center("Transmission", 12, ' ') + StringUtils.center("Doors", 12, ' ') + StringUtils.center("Seats", 8, ' ') + StringUtils.center("Price per day", 16, ' ') + StringUtils.center("Car Size", 12, ' '));

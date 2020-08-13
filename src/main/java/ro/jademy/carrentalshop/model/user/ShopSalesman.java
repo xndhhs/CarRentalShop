@@ -1,11 +1,7 @@
 package ro.jademy.carrentalshop.model.user;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
-public class ShopSalesman extends User implements CustomerStatistics{
-    public ShopSalesman( String userName, String userPass, String firstName, String lastName ) {
+public class ShopSalesman extends User implements CustomerStatistics {
+    public ShopSalesman(String userName, String userPass, String firstName, String lastName) {
         super(userName, userPass, firstName, lastName);
     }
     // see which cars are rented and by whom

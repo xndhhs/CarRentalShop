@@ -1,17 +1,16 @@
 package ro.jademy.carrentalshop;
 
+import ro.jademy.carrentalshop.data.CarBuilder;
+import ro.jademy.carrentalshop.data.ExtrasBuilder;
 import ro.jademy.carrentalshop.model.RentalShop;
-import ro.jademy.carrentalshop.model.cars.Car;
-import ro.jademy.carrentalshop.data.*;
-import org.apache.commons.lang3.StringUtils;
 import ro.jademy.carrentalshop.model.cars.ExtraOptions;
-import ro.jademy.carrentalshop.model.user.ClientProfile;
 import ro.jademy.carrentalshop.model.user.UserList;
+
 import java.util.Scanner;
 
 
 public class Main {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
         //create a shop that contains
         // a shop admin
@@ -43,10 +42,10 @@ public class Main {
         System.out.println("\n\n\n");
         RentalShop.showAllExtras(autovit);
         System.out.println("\n\n\n");
-       // ClientProfile.userRentsExtraOption(autovit);
+        // ClientProfile.userRentsExtraOption(autovit);
         //autovit.login(autovit.getUsers());
 
-       RentalShop.showClientMenu(autovit);
+        RentalShop.showClientMenu(autovit);
 
     }
 }

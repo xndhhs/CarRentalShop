@@ -8,12 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RentedCar {
+
     private Car rentedCar;
     private LocalDate pickupDate;
     private LocalDate returnDate;
     private boolean isRented;
     private double amountToPayRON;
-    private double amountToPayEUR = amountToPayRON / 4.82;
+    private double amountToPayEUR;
     private List<ExtraOptions> extraOptions = new ArrayList<>();
 
     public RentedCar() {
@@ -26,7 +27,7 @@ public class RentedCar {
         this.returnDate = returnDate;
         this.isRented = isRented;
         this.amountToPayRON = amountToPayRON;
-
+        this.amountToPayEUR = amountToPayRON / 4.82;
     }
 
     public List<ExtraOptions> getExtraOptions() {

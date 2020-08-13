@@ -4,7 +4,7 @@ public class MercedesBenzEClass extends MercedesBenz {
     public MercedesBenzEClass() {
     }
 
-    public MercedesBenzEClass(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType) {
+    public MercedesBenzEClass(String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, long pricePerDay, String carType) {
         super("Mercedes-Benz", model, gearbox, fuelType, noOfDoors, noOfSeats, pricePerDay, carType);
     }
 }

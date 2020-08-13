@@ -1,5 +1,7 @@
 package ro.jademy.carrentalshop.model.cars;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Objects;
 
 public abstract class Car implements Comparable<Car> {
@@ -9,14 +11,14 @@ public abstract class Car implements Comparable<Car> {
     protected String fuelType;
     protected int noOfDoors;
     protected int noOfSeats;
-    protected double pricePerDay;
+    protected Long pricePerDay;
     protected String carType;
     private boolean rented = false;
 
     public Car() {
     }
 
-    public Car(String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, double pricePerDay, String carType) {
+    public Car(String make, String model, String gearbox, String fuelType, int noOfDoors, int noOfSeats, Long pricePerDay, String carType) {
         this.make = make;
         this.model = model;
         this.gearbox = gearbox;
@@ -76,11 +78,11 @@ public abstract class Car implements Comparable<Car> {
         this.noOfSeats = noOfSeats;
     }
 
-    public double getPricePerDay() {
+    public Long getPricePerDay() {
         return pricePerDay;
     }
 
-    public void setPricePerDay(double pricePerDay) {
+    public void setPricePerDay(Long pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
 
@@ -118,6 +120,18 @@ public abstract class Car implements Comparable<Car> {
     @Override
     public int hashCode() {
         return Objects.hash(make, model, gearbox, fuelType, noOfDoors, noOfSeats, pricePerDay, carType);
+    }
+
+    @Override
+    public String toString() {
+        return StringUtils.center(make, 14, " ") +
+                StringUtils.center(model, 16, " ") +
+                StringUtils.center(fuelType, 14, " ") +
+                StringUtils.center(gearbox, 14, " ") +
+                StringUtils.center(String.valueOf(noOfDoors), 10, ' ') +
+                StringUtils.center(String.valueOf(noOfSeats), 10, ' ') +
+                StringUtils.center(String.valueOf(pricePerDay), 12, ' ') +
+                StringUtils.center(carType, 20, " ");
     }
 
     @Override

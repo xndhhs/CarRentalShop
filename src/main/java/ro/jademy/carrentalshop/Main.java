@@ -16,35 +16,18 @@ public class Main {
         // a list of users
         // a list of cars
         RentalShop autovit = new RentalShop(ExtrasBuilder.getAllExtras(), CarBuilder.getAllCars(), UserList.getAllUsers());
-        RentalShop.showAllCars(autovit);
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        UserList.showUserCategories();
-        System.out.println();
+//        autovit.showAllCars();
+//        System.out.println();
+//        System.out.println();
+//        System.out.println();
+//        UserList.showUserCategories();
+//        System.out.println();
+//
+//        for (ExtraOptions extraOption : autovit.getExtras()) {
+//            System.out.println("Name: " + extraOption.getName() + "    Price: " + extraOption.getPrice());
+//        }
 
-        for (ExtraOptions extraOption : autovit.getExtras()) {
-            System.out.println("Name: " + extraOption.getName() + "    Price: " + extraOption.getPrice());
-        }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        autovit.sortByMake(autovit);
-        System.out.println("\n\n\n");
-        autovit.sortByModel(autovit);
-        System.out.println("\n\n\n");
-        autovit.sortByFuelType(autovit);
-        System.out.println("\n\n\n");
-        autovit.sortByGearbox(autovit);
-        System.out.println("\n\n\n");
-        autovit.sortByCategory(autovit);
-        System.out.println("\n\n\n");
-        RentalShop.showAllExtras(autovit);
-        System.out.println("\n\n\n");
-        // ClientProfile.userRentsExtraOption(autovit);
-        //autovit.login(autovit.getUsers());
-
-        RentalShop.showClientMenu(autovit);
+        autovit.login();
 
     }
 }

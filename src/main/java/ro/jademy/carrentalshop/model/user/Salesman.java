@@ -1,7 +1,7 @@
 package ro.jademy.carrentalshop.model.user;
 
-public class ShopSalesman extends User implements CustomerStatistics {
-    public ShopSalesman(String userName, String userPass, String firstName, String lastName) {
+public class Salesman extends User implements CustomerStatistics {
+    public Salesman(String userName, String userPass, String firstName, String lastName) {
         super(userName, userPass, firstName, lastName);
     }
     // see which cars are rented and by whom

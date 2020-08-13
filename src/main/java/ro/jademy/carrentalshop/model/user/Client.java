@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ClientProfile extends User implements Payable {
+public class Client extends User implements Payable {
 
     private final LocalDate licenseGainedDate;
     private final int age;
     private final List<RentedCar> carRentedHistory = new ArrayList<>();
 
-    public ClientProfile(String userName, String userPass, String firstName, String lastName, LocalDate licenseGainedDate, int age) {
+    public Client(String userName, String userPass, String firstName, String lastName, LocalDate licenseGainedDate, int age) {
         super(userName, userPass, firstName, lastName);
         this.licenseGainedDate = licenseGainedDate;
         this.age = age;
@@ -30,10 +30,10 @@ public class ClientProfile extends User implements Payable {
     //return a car
     //show car history
 
-    public static List<ExtraOptions> userRentsExtraOption(RentalShop rentalShop) {
+    public List<ExtraOptions> userRentsExtraOption(RentalShop rentalShop) {
         Scanner scanner = new Scanner(System.in);
         List<ExtraOptions> userRentsExtraOption = new ArrayList<>();
-        RentalShop.showAllExtras(rentalShop);
+//        RentalShop.showAllExtras(rentalShop);
         System.out.println("Choose the options you want to add separated by commas: ");
         String options = scanner.next();
         int i = 0;

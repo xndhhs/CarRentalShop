@@ -8,11 +8,11 @@ import java.util.List;
 public class UserList {
     public static List<User> getAllClients() {
         List<User> allClients = new ArrayList<>();
-        User client1 = new Client("client1", "1111", "Ion", "Ionescu", LocalDate.of(2012, Month.JANUARY, 15), 33);
-        User client2 = new Client("client2", "2222", "George", "Georgescu", LocalDate.of(2018, Month.JANUARY, 15), 22);
-        User client3 = new Client("client3", "3333", "Maria", "Popescu", LocalDate.of(2009, Month.JANUARY, 15), 45);
-        User client4 = new Client("client4", "4444", "Ioana", "Petre", LocalDate.of(2011, Month.JANUARY, 15), 31);
-        User client5 = new Client("client5", "5555", "Andrei", "Calin", LocalDate.of(1999, Month.JANUARY, 15), 58);
+        User client1 = new Client("client1", "1111", "Ion", "Ionescu", LocalDate.of(2012, Month.JANUARY, 15), LocalDate.of(1987, Month.JANUARY, 15));
+        User client2 = new Client("client2", "2222", "George", "Georgescu", LocalDate.of(2018, Month.JANUARY, 15), LocalDate.of(1965, Month.JANUARY, 15));
+        User client3 = new Client("client3", "3333", "Maria", "Popescu", LocalDate.of(2009, Month.JANUARY, 15), LocalDate.of(1972, Month.JANUARY, 15));
+        User client4 = new Client("client4", "4444", "Ioana", "Petre", LocalDate.of(2011, Month.JANUARY, 15), LocalDate.of(1995, Month.JANUARY, 15));
+        User client5 = new Client("client5", "5555", "Andrei", "Calin", LocalDate.of(1999, Month.JANUARY, 15), LocalDate.of(1993, Month.JANUARY, 15));
         allClients.add(client1);
         allClients.add(client2);
         allClients.add(client3);

@@ -1,6 +1,8 @@
 package ro.jademy.carrentalshop.model.user;
 
-public class Salesman extends User implements CustomerStatistics {
+import ro.jademy.carrentalshop.services.CustomerStatisticsService;
+
+public class Salesman extends User implements CustomerStatisticsService {
     public Salesman(String userName, String userPass, String firstName, String lastName) {
         super(userName, userPass, firstName, lastName);
     }

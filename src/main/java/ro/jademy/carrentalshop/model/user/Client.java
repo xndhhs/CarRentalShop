@@ -12,42 +12,41 @@ import java.util.Scanner;
 public class Client extends User implements Payable {
 
     private final LocalDate licenseGainedDate;
-    private final int age;
+    private final LocalDate birthDate;
     private final List<RentedCar> carRentedHistory = new ArrayList<>();
 
-    public Client(String userName, String userPass, String firstName, String lastName, LocalDate licenseGainedDate, int age) {
+    public Client(String userName, String userPass, String firstName, String lastName, LocalDate licenseGainedDate, LocalDate birthDate) {
         super(userName, userPass, firstName, lastName);
         this.licenseGainedDate = licenseGainedDate;
-        this.age = age;
-
+        this.birthDate = birthDate;
     }
 
+    public LocalDate getLicenseGainedDate() {
+        return licenseGainedDate;
+    }
 
-    //choose a car from the list
-    //add extras to chosen car
-    //rent a car [date from] - [date to]
-    //calculate price
-    //return a car
-    //show car history
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
 
-    public List<ExtraOptions> userRentsExtraOption(RentalShop rentalShop) {
-        Scanner scanner = new Scanner(System.in);
-        List<ExtraOptions> userRentsExtraOption = new ArrayList<>();
-//        RentalShop.showAllExtras(rentalShop);
-        System.out.println("Choose the options you want to add separated by commas: ");
-        String options = scanner.next();
-        int i = 0;
-        do {
-            int position = Character.getNumericValue(options.charAt(i)) - 1;
-            userRentsExtraOption.add(rentalShop.getExtras().get(position));
-            i += 2;
+    public List<RentedCar> getCarRentedHistory() {
+        return carRentedHistory;
+    }
 
-        } while (i < options.length());
+    // choose a car from the list
+    // add extras to chosen car
+    // rent a car [date from] - [date to]
+    // calculate price
+    // return a car
+    // show car history
 
-        for (ExtraOptions extraOption : userRentsExtraOption) {
-            System.out.println(extraOption.getName());
+    public List<ExtraOptions> rentExtraOptions(List<ExtraOptions> extraOptions, int... extraOptionsIndices) {
+        List<ExtraOptions> rentedExtraOptions = new ArrayList<>();
+        for (int i = 0; i < extraOptionsIndices.length; i++) {
+            rentedExtraOptions.add(extraOptions.get(i));
         }
-        return userRentsExtraOption;
+
+        return rentedExtraOptions;
     }
 
     @Override

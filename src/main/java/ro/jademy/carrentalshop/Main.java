@@ -3,10 +3,7 @@ package ro.jademy.carrentalshop;
 import ro.jademy.carrentalshop.data.CarBuilder;
 import ro.jademy.carrentalshop.data.ExtrasBuilder;
 import ro.jademy.carrentalshop.model.RentalShop;
-import ro.jademy.carrentalshop.model.cars.ExtraOptions;
 import ro.jademy.carrentalshop.model.user.UserList;
-
-import java.util.Scanner;
 
 
 public class Main {
@@ -28,6 +25,5 @@ public class Main {
 //        }
 
         autovit.login();
-
     }
 }

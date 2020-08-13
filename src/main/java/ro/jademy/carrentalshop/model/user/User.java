@@ -1,21 +1,21 @@
 package ro.jademy.carrentalshop.model.user;
 
 public class User {
-    //user can login
-    //access a menu for actions (see cars, rent a car, return a car, calculate rates)
+    // user can login
+    // access a menu for actions (see cars, rent a car, return a car, calculate rates)
     private String userName;
-    private String userPass;
+    private String password;
     private String firstName;
     private String lastName;
 
-    public User(String userName, String userPass, String firstName, String lastName) {
-        this.userName = userName;
-        this.userPass = userPass;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User() {
     }
 
-    public User() {
+    public User(String userName, String password, String firstName, String lastName) {
+        this.userName = userName;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public String getUserName() {
@@ -26,12 +26,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getUserPass() {
-        return userPass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserPass(String userPass) {
-        this.userPass = userPass;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {

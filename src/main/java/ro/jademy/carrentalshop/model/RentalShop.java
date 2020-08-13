@@ -6,20 +6,20 @@ import ro.jademy.carrentalshop.model.cars.Car;
 import ro.jademy.carrentalshop.model.cars.ExtraOptions;
 import ro.jademy.carrentalshop.model.user.User;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class RentalShop implements Sortable {
     static Scanner scanner = new Scanner(System.in);
-    ArrayList<ExtraOptions> extras;
-    ArrayList<Car> cars;
-    ArrayList<User> users;
+    List<ExtraOptions> extras;
+    List<Car> cars;
+    List<User> users;
 
     public RentalShop() {
 
     }
 
-    public RentalShop(ArrayList<ExtraOptions> extras, ArrayList<Car> cars, ArrayList<User> users) {
+    public RentalShop(List<ExtraOptions> extras, List<Car> cars, List<User> users) {
         this.extras = extras;
         this.cars = cars;
         this.users = users;
@@ -175,27 +175,27 @@ public class RentalShop implements Sortable {
         return currentUser;
     }
 
-    public ArrayList<ExtraOptions> getExtras() {
+    public List<ExtraOptions> getExtras() {
         return extras;
     }
 
-    public void setExtras(ArrayList<ExtraOptions> extras) {
+    public void setExtras(List<ExtraOptions> extras) {
         this.extras = ExtrasBuilder.getAllExtras();
     }
 
-    public ArrayList<Car> getCars() {
+    public List<Car> getCars() {
         return cars;
     }
 
-    public void setCars(ArrayList<Car> cars) {
+    public void setCars(List<Car> cars) {
         this.cars = cars;
     }
 
-    public ArrayList<User> getUsers() {
+    public List<User> getUsers() {
         return users;
     }
 
-    public void setUsers(ArrayList<User> users) {
+    public void setUsers(List<User> users) {
         this.users = users;
     }
 

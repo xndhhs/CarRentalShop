@@ -3,14 +3,15 @@ package ro.jademy.carrentalshop.data;
 import ro.jademy.carrentalshop.model.cars.ExtraOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ExtrasBuilder {
 
     public ExtrasBuilder() {
     }
 
-    public static ArrayList<ExtraOptions> getAllExtras() {
-        ArrayList<ExtraOptions> allExtraOptions = new ArrayList<>();
+    public static List<ExtraOptions> getAllExtras() {
+        List<ExtraOptions> allExtraOptions = new ArrayList<>();
         ExtraOptions childSeat = new ExtraOptions("Child Seat", 50);
         ExtraOptions GPS = new ExtraOptions("GPS", 10);
         ExtraOptions secondDriver = new ExtraOptions("Second driver", 10);
@@ -21,6 +22,7 @@ public class ExtrasBuilder {
         allExtraOptions.add(secondDriver);
         allExtraOptions.add(winterTyres);
         allExtraOptions.add(skiRack);
+
         return allExtraOptions;
     }
 

@@ -18,12 +18,13 @@ import ro.jademy.carrentalshop.model.cars.toyota.ToyotaCorolla;
 import ro.jademy.carrentalshop.model.cars.toyota.ToyotaYaris;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CarBuilder {
 
 
-    public static ArrayList<Car> getAllCars() {
-        ArrayList<Car> carList = new ArrayList<>();
+    public static List<Car> getAllCars() {
+        List<Car> carList = new ArrayList<>();
         //Toyota
         Car aygo1 = new ToyotaAygo("Aygo", "Manual", "Gasoline", 4, 4, 57.73, "Small");
         Car yaris1 = new ToyotaYaris("Yaris", "Automatic", "Hybrid", 4, 4, 63.44, "Small");

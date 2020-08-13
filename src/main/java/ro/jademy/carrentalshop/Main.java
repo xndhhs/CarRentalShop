@@ -11,8 +11,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        final Scanner scanner = new Scanner(System.in);
-        //create a shop that contains
+        // create a shop that contains
         // a shop admin
         // a list of users
         // a list of cars

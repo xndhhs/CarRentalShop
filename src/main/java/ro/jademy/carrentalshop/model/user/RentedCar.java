@@ -5,6 +5,7 @@ import ro.jademy.carrentalshop.model.cars.ExtraOptions;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class RentedCar {
     private Car rentedCar;
@@ -13,7 +14,7 @@ public class RentedCar {
     private boolean isRented;
     private double amountToPayRON;
     private double amountToPayEUR = amountToPayRON / 4.82;
-    private ArrayList<ExtraOptions> extraOptions = new ArrayList<>();
+    private List<ExtraOptions> extraOptions = new ArrayList<>();
 
     public RentedCar() {
 
@@ -28,11 +29,11 @@ public class RentedCar {
 
     }
 
-    public ArrayList<ExtraOptions> getExtraOptions() {
+    public List<ExtraOptions> getExtraOptions() {
         return extraOptions;
     }
 
-    public void setExtraOptions(ArrayList<ExtraOptions> extraOptions) {
+    public void setExtraOptions(List<ExtraOptions> extraOptions) {
         this.extraOptions = extraOptions;
     }
 
@@ -82,7 +83,6 @@ public class RentedCar {
 
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
-
     }
 
 }

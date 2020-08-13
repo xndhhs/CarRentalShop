@@ -3,10 +3,11 @@ package ro.jademy.carrentalshop.model.user;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserList {
-    public static ArrayList<User> getAllClients() {
-        ArrayList<User> allClients = new ArrayList<>();
+    public static List<User> getAllClients() {
+        List<User> allClients = new ArrayList<>();
         User client1 = new ClientProfile("client1", "1111", "Ion", "Ionescu", LocalDate.of(2012, Month.JANUARY, 15), 33);
         User client2 = new ClientProfile("client2", "2222", "George", "Georgescu", LocalDate.of(2018, Month.JANUARY, 15), 22);
         User client3 = new ClientProfile("client3", "3333", "Maria", "Popescu", LocalDate.of(2009, Month.JANUARY, 15), 45);
@@ -20,8 +21,8 @@ public class UserList {
         return allClients;
     }
 
-    public static ArrayList<User> getAllSalesmen() {
-        ArrayList<User> allSalesmen = new ArrayList<>();
+    public static List<User> getAllSalesmen() {
+        List<User> allSalesmen = new ArrayList<>();
         User salesman1 = new ShopSalesman("salesman1", "6666", "Alex", "Manole");
         User salesman2 = new ShopSalesman("salesman2", "7777", "Diana", "Sorescu");
         allSalesmen.add(salesman1);
@@ -29,9 +30,8 @@ public class UserList {
         return allSalesmen;
     }
 
-    public static ArrayList<User> getAllUsers() {
-        ArrayList<User> allUsers = new ArrayList<>();
-        allUsers = getAllClients();
+    public static List<User> getAllUsers() {
+        List<User> allUsers = getAllClients();
         allUsers.addAll(getAllSalesmen());
         return allUsers;
     }

@@ -3,6 +3,7 @@ package ro.jademy.carrentalshop;
 import ro.jademy.carrentalshop.data.CarBuilder;
 import ro.jademy.carrentalshop.data.ExtrasBuilder;
 import ro.jademy.carrentalshop.model.RentalShop;
+import ro.jademy.carrentalshop.model.user.Client;
 import ro.jademy.carrentalshop.model.user.UserList;
 
 
@@ -12,18 +13,12 @@ public class Main {
         // a shop admin
         // a list of users
         // a list of cars
-        RentalShop autovit = new RentalShop(ExtrasBuilder.getAllExtras(), CarBuilder.getAllCars(), UserList.getAllUsers());
-//        autovit.showAllCars();
-//        System.out.println();
-//        System.out.println();
-//        System.out.println();
-//        UserList.showUserCategories();
-//        System.out.println();
-//
-//        for (ExtraOptions extraOption : autovit.getExtras()) {
-//            System.out.println("Name: " + extraOption.getName() + "    Price: " + extraOption.getPrice());
-//        }
 
+        RentalShop autovit = new RentalShop(ExtrasBuilder.getAllExtras(), CarBuilder.getAllCars(), UserList.getAllUsers());
+        Client c1 = (Client) autovit.getUsers().get(0);
+        //c1.calculateNoOfDays("22-08-2020","27-08-2020");
         autovit.login();
+
+
     }
 }

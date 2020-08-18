@@ -2,6 +2,8 @@ package ro.jademy.carrentalshop.util;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,5 +38,10 @@ public class InputUtils {
         }
 
         return integerInputList;
+    }
+    public static LocalDate formatDate( String date){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate formattedDate = LocalDate.parse(date,formatter);
+        return formattedDate;
     }
 }

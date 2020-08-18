@@ -1,6 +1,6 @@
 package ro.jademy.carrentalshop.model.user;
 
-public class User {
+public class User{
     // user can login
     // access a menu for actions (see cars, rent a car, return a car, calculate rates)
     private String userName;

@@ -1,11 +1,15 @@
 package ro.jademy.carrentalshop.model.user;
 
+import java.time.LocalDate;
+
 public interface Payable {
 
     // calculate rental period
-    void calculateNoOfDays();
+    int calculateNoOfDays( String startDate, String endDate);
 
     // calculate fee to be paid
+    //car value + extra options if existent * no of days
+
     void calculateFee();
 
     // if driver age < 27 years ->10% penalty
